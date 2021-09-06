@@ -1,2 +1,2 @@
 # NumberGuess4Versions
-Simple number guessing game
+4 versions of a simple number guessing game
