@@ -1,0 +1,36 @@
+using System;
+using System.Threading;
+
+namespace ny
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool gameOn = true;
+
+            
+            int rightNr = new Random().Next(1, 10);
+
+            while (gameOn)
+            {
+                
+                Console.Write("Pick a number: ");
+                int guessedNr = Convert.ToInt32(Console.ReadLine());
+
+                if (guessedNr != rightNr)
+                {
+                    string message = guessedNr < rightNr ? "För lågt" : "För högt";
+                    Console.WriteLine(message);
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                }
+                else
+                    gameOn = false;
+
+                
+            }
+            Console.WriteLine("Grattis!");
+        }
+    }
+}
