@@ -20,7 +20,7 @@ namespace ny
 
                 if (guessedNr != rightNr)
                 {
-                    string message = guessedNr < rightNr ? "För lågt" : "För högt";
+                    string message = guessedNr < rightNr ? "Too low. Try again!" : "Too high. Try again!";
                     Console.WriteLine(message);
                     Thread.Sleep(2000);
                     Console.Clear();
@@ -30,7 +30,7 @@ namespace ny
 
                 
             }
-            Console.WriteLine("Grattis!");
+            Console.WriteLine("Congratulations! You picked the right number!");
         }
     }
 }
